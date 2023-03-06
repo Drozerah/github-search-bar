@@ -31,7 +31,7 @@ defineProps({
 <style lang="scss" scoped>
 .cards{
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 10px;
   margin: 25px 0;
   .content-title{
