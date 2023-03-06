@@ -13,6 +13,7 @@
           <div class="form">
             <o-input
               ref="input"
+              type="password"
               v-model="password"
               v-on:keyup.enter="fakeAuth"
               @update:modelValue="validate"
