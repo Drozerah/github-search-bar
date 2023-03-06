@@ -1,0 +1,32 @@
+{
+  "name": "izypay-test-thomas-gauthier",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "@octokit/core": "^4.2.0",
+    "@oruga-ui/oruga-next": "^0.5.10",
+    "@oruga-ui/theme-bulma": "^0.2.9",
+    "axios": "^1.3.4",
+    "isomorphic-fetch": "^3.0.0",
+    "pinia": "^2.0.32",
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vue/test-utils": "^2.3.0",
+    "eslint": "^8.34.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "jsdom": "^21.1.0",
+    "sass": "^1.58.3",
+    "vite": "^4.1.4",
+    "vitest": "^0.29.1"
+  }
+}

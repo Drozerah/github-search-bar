@@ -1,0 +1,11 @@
+@import './base.scss';
+
+#app {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 25px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
