@@ -15,7 +15,7 @@
             <button
               v-if="isDeleteBtn"
               @click="store.removeItemById(item.id)"
-              class="button is-danger is-outlined is-small">Delete</button>
+              class="button is-outlined is-small">Delete</button>
           </div>
             
             <h3 class="content-title">{{ item.name }}</h3>
