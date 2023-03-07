@@ -2,8 +2,8 @@
   <div class="cards">
       <div
         class="card"
-        v-for="(item, idx) of reverseArray(data)"
-        :key="`item_${idx}`"
+        v-for="item in reverseArray(data)"
+        :key="item.id"
         >
         <div class="card-content">
           <div class="content">
