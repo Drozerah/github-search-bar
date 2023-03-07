@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useSelectionStore = defineStore('selection', () => {
+export const useSelectionStore = defineStore('selectionStore', () => {
   const selection = ref([])
   const error = ref('')
   const addItem = (item) => {
