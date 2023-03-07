@@ -4,6 +4,6 @@
 
 <script setup>
 import BaseCards from '@components/BaseCards.vue'
-import { useSelectionStore } from '@stores/selection'
+import { useSelectionStore } from '@stores/SelectionStore'
 const store = useSelectionStore()
 </script>

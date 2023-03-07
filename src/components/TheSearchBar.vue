@@ -52,7 +52,7 @@
 </template>
 <script setup>
 import { ref, watch } from 'vue'
-import { useSelectionStore } from '@stores/selection'
+import { useSelectionStore } from '@stores/SelectionStore'
 import BaseCards from '@components/BaseCards.vue'
 const store = useSelectionStore()
 import { Octokit } from '@octokit/core'

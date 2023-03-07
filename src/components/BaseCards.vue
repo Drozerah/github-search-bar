@@ -28,7 +28,7 @@
 </template>
 
 <script setup>
-import { useSelectionStore } from '@stores/selection'
+import { useSelectionStore } from '@stores/SelectionStore'
 const store = useSelectionStore()
 import { reverseArray } from '@utils'
 defineProps({
