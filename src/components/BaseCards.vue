@@ -7,9 +7,16 @@
         >
         <div class="card-content">
           <div class="content">
+          <div class="content-header">
             <div
-            v-if="item.searchTerm"
-            >Term of search : <span class="tag is-link is-light">{{ item.searchTerm }}</span></div>
+              v-if="item.searchTerm"
+            >Term of search : <span class="tag is-link is-light">{{ item.searchTerm }}</span>
+            </div>
+            <button
+              v-if="isDeleteBtn"
+              @click="store.removeItemById(item.id)"
+              class="button is-danger is-outlined is-small">Delete</button>
+          </div>
             
             <h3 class="content-title">{{ item.name }}</h3>
             <p>{{ item.description }}</p>
@@ -21,10 +28,16 @@
 </template>
 
 <script setup>
+import { useSelectionStore } from '@stores/selection'
+const store = useSelectionStore()
 import { reverseArray } from '@utils'
 defineProps({
   data: {
     type: Array
+  },
+  isDeleteBtn: {
+    type: Boolean,
+    default: false
   }
 })
 </script>
@@ -35,6 +48,11 @@ defineProps({
   flex-direction: column;
   gap: 10px;
   margin: 25px 0;
+  .content-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .content-title{
     margin: 15px 0;
   }
