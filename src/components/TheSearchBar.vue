@@ -3,9 +3,9 @@
       class="message is-danger"
       v-show="isError"
     >
-    <div class="message-body">
-      {{ isError }}
-    </div>
+      <div class="message-body">
+        {{ isError }}
+      </div>
     </div>
     <o-autocomplete
       ref="autocomplete"
@@ -42,7 +42,6 @@
           v-if="!isFetching && name && data.length"
         >
           <button 
-            class="btn"
             @click="getMoreAsyncData"
             >Add {{resultsPerPage }} more results for "{{ name }}"</button>
         </div>
@@ -52,11 +51,11 @@
 </template>
 <script setup>
 import { ref, watch } from 'vue'
+import { Octokit } from '@octokit/core'
 import { useSelectionStore } from '@stores/SelectionStore'
 import BaseCards from '@components/BaseCards.vue'
-const store = useSelectionStore()
-import { Octokit } from '@octokit/core'
 const octokit = new Octokit()
+const store = useSelectionStore()
 const autocomplete = ref(null)
 const data = ref([])
 const page = ref(1)
@@ -122,7 +121,7 @@ watch(selected, (newValue) => {
 
 <style scoped lang='scss'>
 .fetching {
-  color: #7957ff;
+  color: var(--violet);
 }
 .autocomplete .dropdown-menu {
   transform: translateY(2px);
@@ -132,7 +131,7 @@ watch(selected, (newValue) => {
     box-shadow: 0 0 0 0.125em rgb(121 87 213 / 25%);
   }
 }
-.btn{
+button{
   color:var(--white);
   background-color: var(--violet);
   padding: 2px 8px;
