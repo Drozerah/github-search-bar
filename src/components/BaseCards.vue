@@ -1,9 +1,9 @@
 <template>
   <div class="cards">
       <div
+        class="card"
         v-for="(item, idx) of reverseArray(data)"
         :key="`item_${idx}`"
-        class="card"
         >
         <div class="card-content">
           <div class="content">
@@ -13,9 +13,10 @@
             >Term of search : <span class="tag is-link is-light">{{ item.searchTerm }}</span>
             </div>
             <button
+              class="button is-outlined is-small"
               v-if="isDeleteBtn"
               @click="store.removeItemById(item.id)"
-              class="button is-outlined is-small">Delete</button>
+            >Delete</button>
           </div>
             
             <h3 class="content-title">{{ item.name }}</h3>

@@ -19,8 +19,8 @@
               @update:modelValue="validate"
             ></o-input>
             <button
-              @click="fakeAuth"
               :disabled="isDisabled"
+              @click="fakeAuth"
             >Login</button>
           </div>
         </div>

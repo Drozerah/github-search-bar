@@ -9,9 +9,9 @@
     </div>
     <o-autocomplete
       ref="autocomplete"
-      :data="data"
       placeholder="e.g. Component"
       field="title"
+      :data="data"
       :debounce-typing="500"
       :openOnFocus="data.length ? true : false"
       @typing="getAsyncData"
