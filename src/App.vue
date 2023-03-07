@@ -34,6 +34,7 @@ nav a.router-link-exact-active {
   text-decoration-style: wavy;
   text-decoration-line: underline;
   text-decoration-color: var( --violet);
+  text-decoration-thickness: from-font;
 }
 
 nav a.router-link-exact-active:hover {
