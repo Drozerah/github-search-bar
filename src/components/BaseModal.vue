@@ -31,7 +31,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useBootStore } from '@stores/boot'
+import { useBootStore } from '@stores/BootStore'
 const store = useBootStore()
 const isModal = ref(true)
 const input = ref(null)
