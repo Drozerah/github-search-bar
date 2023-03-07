@@ -1,7 +1,7 @@
 <template>
   <div class="cards">
       <div
-        v-for="(item, idx) of data"
+        v-for="(item, idx) of reverseArray(data)"
         :key="`item_${idx}`"
         class="card"
         >
@@ -21,6 +21,7 @@
 </template>
 
 <script setup>
+import { reverseArray } from '@utils'
 defineProps({
   data: {
     type: Array
@@ -31,7 +32,7 @@ defineProps({
 <style lang="scss" scoped>
 .cards{
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   gap: 10px;
   margin: 25px 0;
   .content-title{
