@@ -13,7 +13,7 @@
       field="title"
       :data="data"
       :debounce-typing="500"
-      :openOnFocus="data.length ? true : false"
+      :openOnFocus="!!data.length"
       @typing="getAsyncData"
       @select="(option) => (selected = option)"
     >
