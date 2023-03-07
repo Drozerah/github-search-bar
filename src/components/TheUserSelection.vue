@@ -1,5 +1,5 @@
 <template>
-    <BaseCards :data='store.selection' />
+    <BaseCards :data='store.selection' :isDeleteBtn='true' />
 </template>
 
 <script setup>
