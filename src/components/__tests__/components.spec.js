@@ -4,8 +4,10 @@ import { mount } from '@vue/test-utils'
 import DummyComponent from '../DummyComponent.vue'
 
 describe('DummyComponent', () => {
-  it('has h1', () => {
+  it('should have an h1 element with "Dummy Component" as text content', () => {
     const wrapper = mount(DummyComponent)
-    expect(wrapper.find('h1').exists())
+    const title = wrapper.find('h1')
+    expect(title.exists()).toBe(true)
+    expect(title.text()).toEqual('Dummy Component')
   })
 })
