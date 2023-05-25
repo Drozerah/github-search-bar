@@ -11,13 +11,14 @@
             v-if="error"
           >{{ error }}</p>
           <div class="form">
-            <o-input
+            <input
+              class="input"
               ref="input"
               type="password"
               v-model="password"
               v-on:keyup.enter="fakeAuth"
-              @update:modelValue="validate"
-            ></o-input>
+              @input="validate"
+            >
             <button
               :disabled="isDisabled"
               @click="fakeAuth"
